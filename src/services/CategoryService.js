@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const apiClient = axios.create({
   baseURL: `https://blog.trongggg.com/wp-json/posts_custom/v1`,
@@ -10,10 +10,10 @@ const apiClient = axios.create({
 })
 
 export default {
-  getPost () {
-    return apiClient.get('/list_post')
+  getCategory () {
+    return apiClient.get('/list_category')
   },
-  getPostDetails (id) {
-    return apiClient.get('/list_post/' + id)
+  getCategoryDetails (id) {
+    return apiClient.get('/list_category/' + id)
   }
 }
