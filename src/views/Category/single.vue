@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="max-width:1280px">
+  <div class="container">
     <div class="row">
       <v-card v-for="(post,i) in category" :key="post.ID" style="margin: 10px">
         <v-card-title>

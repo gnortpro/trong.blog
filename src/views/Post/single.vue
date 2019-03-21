@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="max-width: 1280px">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="post-title">
