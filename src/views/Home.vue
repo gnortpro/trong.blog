@@ -3,6 +3,7 @@
     <!-- <articles>
       <banner />
     </articles>-->
+    <NotificationUpdate/>
     <newestpost/>
 
     <!-- <subscribe /> -->
@@ -15,7 +16,8 @@ export default {
   name: "Home",
 
   components: {
-    newestpost: () => import("@/components/NewestPosts.vue")
+    newestpost: () => import("@/components/NewestPosts.vue"),
+    NotificationUpdate: () => import("@/components/core/NotificationUpdate.vue")
   }
 };
 </script>
