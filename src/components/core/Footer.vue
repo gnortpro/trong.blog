@@ -20,7 +20,10 @@
           <v-icon>mdi-chevron-up</v-icon>
         </base-btn>
       </v-layout>
-      <div class="text-center" style="color:white">@2019 Trong. On demo version</div>
+      <div
+        class="text-center"
+        style="color:white"
+      >&copy; {{ new Date().getFullYear() }} By Trong. On demo version</div>
     </v-container>
   </v-footer>
 </template>
@@ -30,32 +33,13 @@ export default {
   data: () => ({
     items: [
       {
-        href: "#!",
-        icon: "mdi-twitter"
-      },
-      {
-        href: "#!",
-        icon: "mdi-instagram"
-      },
-      {
-        href: "#!",
+        href: "https://www.facebook.com/anhyeuemnhieulamluon",
         icon: "mdi-facebook"
       },
+
       {
-        href: "#!",
-        icon: "mdi-google-plus"
-      },
-      {
-        href: "#!",
-        icon: "mdi-reddit"
-      },
-      {
-        href: "#!",
-        icon: "mdi-discord"
-      },
-      {
-        href: "#!",
-        icon: "mdi-pinterest"
+        href: "https://blog.trongggg.com",
+        icon: "mdi-web"
       }
     ]
   })
