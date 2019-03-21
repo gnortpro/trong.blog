@@ -4,8 +4,7 @@
       <v-list-tile
         v-for="(link, i) in links"
         :key="i"
-        :to="link.to"
-        :href="link.href"
+        :to="{ name: 'single-category', params: { id: link.term_id } }"
         @click="onClick($event, link)"
       >
         <v-list-tile-title v-text="link.name"/>
