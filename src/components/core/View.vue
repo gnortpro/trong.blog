@@ -1,5 +1,5 @@
 <template>
   <v-content id="home">
-    <router-view />
+    <router-view :key="$route.fullPath"/>
   </v-content>
 </template>

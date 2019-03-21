@@ -15,11 +15,12 @@
         <v-btn
           v-for="(link, i) in links"
           :key="i"
-          :to="link.to"
+          :to="{ name: 'single-category', params: { id: link.term_id } }"
           class="ml-0 hidden-sm-and-down"
           flat
-          @click="onClick($event, item)"
-        >{{ link.text }}</v-btn>
+          @click="onClick($event, link)"
+        >{{ link.name }}</v-btn>
+
         <v-spacer/>
         <v-text-field
           append-icon="mdi-magnify"
@@ -47,9 +48,9 @@ export default {
     onClick(e, item) {
       e.stopPropagation();
 
-      if (item.to || !item.href) return;
+      if (item.slug || !item.slug) return;
 
-      this.$vuetify.goTo(item.href);
+      this.$vuetify.goTo(item.slug);
     }
   }
 };
