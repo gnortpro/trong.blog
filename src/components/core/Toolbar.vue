@@ -3,22 +3,22 @@
     <v-toolbar-side-icon class="hidden-md-and-up" @click="toggleDrawer"/>
     <v-container mx-auto py-0>
       <v-layout>
-        <v-img
-          :src="require('@/assets/logo.png')"
-          class="mr-5"
-          contain
-          height="48"
-          width="48"
-          max-width="48"
-          @click="$vuetify.goTo(0)"
-        />
+        <router-link to="/">
+          <v-img
+            :src="require('@/assets/logo.png')"
+            class="mr-5"
+            contain
+            height="48"
+            width="48"
+            max-width="48"
+          />
+        </router-link>
         <v-btn
           v-for="(link, i) in links"
           :key="i"
           :to="{ name: 'single-category', params: { id: link.term_id } }"
           class="ml-0 hidden-sm-and-down"
           flat
-          @click="onClick($event, link)"
         >{{ link.name }}</v-btn>
 
         <v-spacer/>
@@ -44,14 +44,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["toggleDrawer"]),
-    onClick(e, item) {
-      e.stopPropagation();
-
-      if (item.slug || !item.slug) return;
-
-      this.$vuetify.goTo(item.slug);
-    }
+    ...mapMutations(["toggleDrawer"])
   }
 };
 </script>

@@ -35,7 +35,7 @@ export default new Vuex.Store({
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
     toggleDrawer: state => (state.drawer = !state.drawer),
-    SET_POST: (state, payload) => (state.articles = payload),
+    SET_POST: (state, payload) => (state.posts = payload),
     // get category ở đây luôn
     SET_LINK: (state, payload) => (state.links = payload),
     SET_CATEGORY_BY_ID: (state, payload) => (state.category = payload),

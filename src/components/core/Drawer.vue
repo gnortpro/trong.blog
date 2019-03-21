@@ -1,6 +1,9 @@
 <template>
   <v-navigation-drawer v-model="drawer" app dark temporary>
     <v-list>
+      <v-list-tile to="/">
+        <v-list-tile-title>Home</v-list-tile-title>
+      </v-list-tile>
       <v-list-tile
         v-for="(link, i) in links"
         :key="i"
